@@ -1,4 +1,7 @@
 # angular-card-slider
+
+Card-slider component made in angularJs and fully animated with CSS3.
+
 Angular seed based on https://github.com/paislee/healthy-gulp-angular
 
 gulp watch-dev Clean, build, and watch live changes to the dev environment. Built sources are served directly by the dev server from /dist.dev.
