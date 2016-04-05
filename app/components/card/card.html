@@ -1,0 +1,20 @@
+<article class="cs-card">
+  <div class="cs-card--obverse">
+    <ng-transclude class="cs-card--transclude"></ng-transclude>
+    <p class="cs-card--title">
+      {{csCardTitle}}
+    </p>
+    <p class="cs-card--family">
+      {{csCardFamily}}
+    </p>
+    <div class="cs-card--image--container">
+      <img class="cs-card--image" ng-src="{{csCardObverse}}" alt="image" draggable="false" />
+      <img class="cs-card--image_rotated" ng-src="{{csCardObverse}}" alt="image" draggable="false" />
+    </div>
+  </div>
+  <div class="cs-card--reverse">
+      <img class="cs-card--reverse-image" ng-src="{{csCardReverse}}" alt="image" draggable="false" />
+  </div>
+
+
+</article>

@@ -1,0 +1,55 @@
+@import "app/styles/_colors.scss";
+.cs-slider {
+  position: relative;
+  display: block;
+  background: $mfc-gray__light;
+  width: 100%;
+  height: 800px;
+}
+
+.cs-slider--card {
+  position: absolute;
+  transition: transform 1.5s ease;
+  transform: scale(0.8)translateX(0%);
+  &.active, &.prev, &.next{
+    display: block;
+    visibility: visible;
+    transition: transform 1.5s ease;
+    .cs-card{
+      transition: transform 1.5s ease;
+    }
+  }
+
+  &.active {
+
+    transform: scale(1) translateX(270%);
+
+      .cs-card {
+        transform:rotateX(180deg);
+      }
+
+  }
+
+  &.prev {
+    transform: scale(0.8) translateX(190%);
+    bottom: 0;
+     .cs-card{
+       margin-top:240px;
+       transform:rotateX(0deg);
+     }
+
+
+  }
+
+  &.next {
+    transform: scale(0.8) translateX(490%);
+    bottom: 0;
+
+
+   .cs-card{
+     margin-top:240px;
+     transform:rotateX(0deg);
+   }
+  }
+
+}

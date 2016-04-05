@@ -1,0 +1,88 @@
+@import "app/styles/_colors.scss";
+.cs-card {
+  position:relative;
+  margin: 170px 35px;
+  width: 330px;
+  height: 470px;
+  transform-style: preserve-3d;
+  .cs-card--obverse, .cs-card--reverse {
+    display: block;
+    backface-visibility: hidden;
+    border: 10px solid $cs-blue_dark;
+    border-radius: 10px;
+    width: 310px;
+    height: 450px;
+    position:absolute;
+  }
+
+  .cs-card--reverse {
+    z-index: 2;
+    transform: rotateX(0deg);
+    background-color:white;
+    background-image:
+    radial-gradient(midnightblue 9px, transparent 10px),
+    repeating-radial-gradient(midnightblue 0, midnightblue 4px, transparent 5px, transparent 20px, midnightblue 21px, midnightblue 25px, transparent 26px, transparent 50px);
+    background-size: 30px 30px, 90px 90px;
+    background-position: 0 0;
+    .cs-card--reverse-image{
+      width:100%;
+      height: 100%;
+    }
+  }
+
+  .cs-card--obverse {
+    background: $cs-blue_light;
+    transform: rotateX(180deg);
+  }
+
+  .cs-card--title {
+    display: inline-block;
+    line-height: 83px;
+    float: left;
+    margin-left: 10px;
+    font-size: 30px;
+    height: 50px;
+  }
+  .cs-card--family {
+    display: inline-block;
+    line-height: 90px;
+    float: left;
+    font-size: 20px;
+    margin-left: 10px;
+    height: 50px;
+  }
+
+  .cs-card--transclude{
+    float: left;
+    height: 50px;
+  }
+
+  .cs-card--image--container {
+    position: relative;
+    float: left;
+    width: 290px;
+        height: 360px;
+    display: block;
+  }
+  .cs-card--image {
+    position: absolute;
+    right: 8px;
+    width: 95%;
+    height: 178px;
+    display: block;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  .cs-card--image_rotated {
+    position: absolute;
+    bottom: 0;
+    right: 8px;
+    width: 95%;
+    height: 178px;
+    display: block;
+    transform: rotateX(180deg);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+
+}

@@ -1,4 +1,4 @@
-angular.module('simple-angular-seed', ['ui.router'])
+angular.module('card-slider', ['ui.router','ngAnimate','ngTouch', 'angular-carousel'])
 
 .config(['$stateProvider', '$urlRouterProvider',
     function($stateProvider, $urlRouterProvider) {
@@ -7,8 +7,8 @@ angular.module('simple-angular-seed', ['ui.router'])
 
         $stateProvider
 
-            .state('home', {
-                url: '/',
+            .state('slider', {
+                url: '/slider',
                 controller: 'homeCtrl',
                 templateUrl: 'modules/home/home.html'
             });

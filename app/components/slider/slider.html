@@ -1,0 +1,16 @@
+<section class="cs-slider">
+
+        <card class="cs-slider--card "
+              ng-class="{'active':($index===currentCardIndex) ,'prev':($index===previousCardIndex),'next':($index===nextCardIndex),'animate-left':($direction==='left'),'animate-right':($direction==='right')}"
+              ng-repeat="card in csDeck track by $index"
+              ng-swipe-right="prevCard()"
+              ng-swipe-left="nextCard()"
+              cs-card-title="{{card.csCardTitle}}"
+              cs-card-family="{{card.csCardFamily}}"
+              cs-card-obverse="{{card.csCardObverse}}"
+              cs-card-reverse="{{card.csCardReverse}}">
+          <h1>
+            {{$index+1}}
+          </h1>
+        </card>
+</section>

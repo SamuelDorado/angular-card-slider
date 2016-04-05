@@ -1,4 +1,4 @@
-angular.module('simple-angular-seed')
+angular.module('card-slider')
 
 .directive('demoComponent', [function() {
         return {
