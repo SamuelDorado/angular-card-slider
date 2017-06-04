@@ -48,9 +48,6 @@
                   scope.nextCardIndex= ++newCurrentCardIndex;
               }
              };
-
-            console.log(scope);
-            console.log(el);
         }
       }
 })();
